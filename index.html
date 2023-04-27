@@ -4,9 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Weather Dashboard App</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="container justify-content-center">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="searchCity" placeholder="Enter city name" aria-label="City Search">
+                        <button class="btn btn-outline-primary" type="button" id="searchBtn">Search</button>
+                    </div>
+                    <div class="container">
+                        <div id="searchHist"></div>
+                        <button class="btn btn-outline-danger" type="button" id="clearHist">CLEAR</button>
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <div class="container">
+                        <h3 id="forecast">Weather Now</h3>
+                        <div class="row">
+                            <h4 id="newCity"></h4>
+                            <h5 id="newDate"></h5>
+                            <img src="" alt="" id="newIcon"></img>
+                            <span id="newTemp"></span>
+                            <span id="newWind"></span>
+                            <span id="newHumid"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container cardContainer">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row">
+                        <!--five day forecast cards below-->
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-title" id="day1date"></h6>
+                                <img src="" alt="" id="day1icon"></img>
+                                <p id="day1Temp"></p>
+                                <p id="day1Wind"></p>
+                                <p id="day1Humid"></p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-title" id="day2date"></h6>
+                                <img src="" alt="" id="day2icon"></img>
+                                <p id="day2Desc"></p>
+                                <p id="day2Temp"></p>
+                                <p id="day2Wind"></p>
+                                <p id="day2Humid"></p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-title" id="day3date"></h6>
+                                <img src="" alt="" id="day3icon"></img>
+                                <p id="day3Desc"></p>
+                                <p id="day3Temp"></p>
+                                <p id="day3Wind"></p>
+                                <p id="day3Humid"></p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-title" id="day3date"></h6>
+                                <img src="" alt="" id="day3icon"></img>
+                                <p id="day3Desc"></p>
+                                <p id="day3Temp"></p>
+                                <p id="day3Wind"></p>
+                                <p id="day3Humid"></p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-title" id="day4date"></h6>
+                                <img src="" alt="" id="day4icon"></img>
+                                <p id="day4Desc"></p>
+                                <p id="day4Temp"></p>
+                                <p id="day4Wind"></p>
+                                <p id="day4Humid"></p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-title" id="day5date"></h6>
+                                <img src="" alt="" id="day5icon"></img>
+                                <p id="day5Desc"></p>
+                                <p id="day5Temp"></p>
+                                <p id="day5Wind"></p>
+                                <p id="day5Humid"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./Assets/javascript/script.js"></script>
 </body>
 </html>

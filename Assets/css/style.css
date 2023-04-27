@@ -1,0 +1,13 @@
+[class*='col'] {
+    padding: 1.2rem;
+}
+
+.navbar {
+    background-image: linear-gradient(to right,blue,blueviolet);
+    color: white;
+}
+
+body {
+    background-color: hsla(230, 62%, 48%, 0.3)
+}
+
