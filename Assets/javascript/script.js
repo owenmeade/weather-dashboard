@@ -22,14 +22,14 @@ function renderSaved() {
 
 
 function checkForecast(city) {
-    var goecodeAPI = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=&appid=276c0656662a6a59a909e990f466781c'
+    var goecodeAPI = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=&appid=276c0656662a6a59a909e990f466781c'
     fetch(goecodeAPI).then(function (response) {
         return response.json();
     })
     .then(function (data) {
         var lati = data[0].lat
         var lon = data[0].lon
-        var weatherAPI = 'api.openweathermap.org/data/2.5/forecast?lat=' + lati + '&lon=' + lon + '&appid=276c0656662a6a59a909e990f466781c'
+        var weatherAPI = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lati + '&lon=' + lon + '&appid=276c0656662a6a59a909e990f466781c'
         fetch(weatherAPI).then(function (response) {
             return response.json();
         })
@@ -42,7 +42,7 @@ function checkForecast(city) {
             $('#newWind').text('-->Wind Speed:' + data.wind.speed + 'mph');
             $('#newHumid').text('-->' + data.main.humidity + '% Humidity');
         })
-        var fiveDayUrl = 'api.openweathermap.org/data/2.5/forecast?lat=' + lati + '&lon=' + lon + '&appid=276c0656662a6a59a909e990f466781c&units=imperial'
+        var fiveDayUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lati + '&lon=' + lon + '&appid=276c0656662a6a59a909e990f466781c&units=imperial'
         fetch(fiveDayUrl).then(function (response) {
             return response.json();
         })
