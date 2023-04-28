@@ -11,3 +11,19 @@ body {
     background-color: hsla(230, 62%, 48%, 0.3)
 }
 
+.fiveDayDisplay {
+    background-color: white;
+    border: solid 2px black;
+    margin: 2rem;
+}
+
+.forecast {
+    display: flex;
+    min-height: 200px;
+    background-color: white;
+    border: solid 2px black;
+}
+
+.card {
+    background-color: gray;
+}
